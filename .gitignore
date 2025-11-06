@@ -1,0 +1,77 @@
+# WordPress Core Files (managed by Docker)
+# We don't track core WordPress files as they're managed by the Docker container
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Docker volumes and data
+# We don't ignore the docker-compose.yml itself, just the runtime data
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.buildpath
+
+# Node modules (if using any build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build files
+/dist/
+/build/
+
+# Logs
+*.log
+logs/
+*.sql
+*.sqlite
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# WordPress specific
+wp-config.php
+.htaccess
+
+# Keep custom plugins and themes (these are what we develop)
+!wp-content/plugins/
+!wp-content/themes/
+
+# But ignore uploaded media files except for .gitkeep
+wp-content/uploads/*
+!wp-content/uploads/.gitkeep
+
+# Ignore cache and backup files
+wp-content/cache/
+wp-content/backups/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+
+# Ignore language files (usually managed by WordPress)
+wp-content/languages/
