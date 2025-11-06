@@ -1,0 +1,27 @@
+{
+  "name": "DealRoom WordPress Development",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "wordpress",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [8080, 8081],
+  "portsAttributes": {
+    "8080": {
+      "label": "WordPress",
+      "onAutoForward": "notify"
+    },
+    "8081": {
+      "label": "phpMyAdmin",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "echo 'WordPress development environment is ready!'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "mrmlnc.vscode-apache",
+        "felixfbecker.php-debug"
+      ]
+    }
+  }
+}

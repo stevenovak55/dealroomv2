@@ -1,0 +1,32 @@
+tasks:
+  - name: Start WordPress
+    init: |
+      echo "Initializing WordPress development environment..."
+    command: |
+      docker compose up -d
+      gp await-port 8080
+      echo ""
+      echo "✅ WordPress is ready!"
+      echo "🌐 WordPress: $(gp url 8080)"
+      echo "🗄️  phpMyAdmin: $(gp url 8081)"
+      echo ""
+      echo "📚 See GETTING-STARTED.md for instructions"
+
+ports:
+  - port: 8080
+    onOpen: notify
+    name: WordPress
+    description: WordPress development site
+  - port: 8081
+    onOpen: ignore
+    name: phpMyAdmin
+    description: Database management interface
+  - port: 3306
+    onOpen: ignore
+    name: MySQL
+
+vscode:
+  extensions:
+    - bmewburn.vscode-intelephense-client
+    - mrmlnc.vscode-apache
+    - felixfbecker.php-debug
