@@ -2,7 +2,14 @@
 
 A Docker-based WordPress development environment for developing and testing custom WordPress plugins and themes.
 
-## Prerequisites
+## 🚀 Don't Have Docker? No Problem!
+
+If you can't run Docker locally or are using Claude Code web, see these quick alternatives:
+
+- **⚡ [Deploy to Railway.app](DEPLOY-TO-RAILWAY.md)** - Easiest! Deploy to cloud in 5 minutes (recommended)
+- **📋 [All Alternatives](QUICK-START-ALTERNATIVES.md)** - InstaWP, LocalWP, DigitalOcean, and more options
+
+## Prerequisites (For Local Docker Setup)
 
 - Docker installed on your machine ([Get Docker](https://docs.docker.com/get-docker/))
 - Docker Compose installed (usually comes with Docker Desktop)
